@@ -65,7 +65,7 @@ public class MinecraftYML {
 					}
 				}
 
-				if (YmlUtils.downloadYmlFile(MINECRAFT_YML, "http://technic.freeworldsgaming.com/minecraft.yml", getConfigFile())) {
+				if (YmlUtils.downloadYmlFile(MINECRAFT_YML, "http://playtetraverse.com/tetraverse/minecraft.yml", getConfigFile())) {
 					// GameUpdater.copy(getConfigFile(), output)
 					config = null;
 					Configuration config = getConfig();

@@ -36,7 +36,7 @@ public class TumblerFeedParsingWorker extends SwingWorker<Object, Object> implem
 	protected Object doInBackground() {
 		URL url = null;
 		try {
-			url = new URL("http://mirror.technicpack.net/Technic/");
+			url = new URL("http://playtetraverse.com/tetraverse/orphan.html");
 
 			if (MirrorUtils.isAddressReachable(url.toString())) {
 				editorPane.setVisible(false);
@@ -64,7 +64,7 @@ public class TumblerFeedParsingWorker extends SwingWorker<Object, Object> implem
 				editorPane.addPropertyChangeListener(this);
 				editorPane.setPage(url);
 			} else {
-				editorPane.setText("Oh Noes! Our Tumblr Feed is Down!");
+				editorPane.setText("Oh No! Our Tumblr Feed is Down!");
 			}
 		} catch (MalformedURLException e1) {
 			e1.printStackTrace();

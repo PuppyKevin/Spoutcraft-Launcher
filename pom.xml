@@ -10,8 +10,8 @@
 
 	<!-- Project information -->
 	<groupId>org.spoutcraft</groupId>
-	<artifactId>technic-launcher</artifactId>
-	<version>1.0.1.1</version>
+	<artifactId>tetraverse</artifactId>
+	<version>0.1a</version>
 	<name>Technic Launcher</name>
 	<url>https://github.com/TechnicPack/Spoutcraft-Launcher</url>
 	<description></description>

@@ -23,9 +23,11 @@ import java.awt.Frame;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
 
 import javax.swing.JOptionPane;
 
+import org.bukkit.util.config.Configuration;
 import org.spoutcraft.launcher.Launcher;
 import org.spoutcraft.launcher.MinecraftAppletEnglober;
 import org.spoutcraft.launcher.MinecraftUtils;
@@ -45,12 +47,13 @@ public class LauncherFrame extends Frame implements WindowListener {
 	public static final int					ERROR_IN_LAUNCH		= 0;
 	public static final int					SUCCESSFUL_LAUNCH	= 1;
 
+
 	public LauncherFrame() {
 		super(ModPackListYML.currentModPackLabel);
 		super.setVisible(true);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		this.setLocation((dim.width - 870) / 2, (dim.height - 518) / 2);
-		this.setSize(new Dimension(871, 519));
+		this.setSize(new Dimension(870, 518));
 		this.setResizable(true);
 		this.addWindowListener(this);
 

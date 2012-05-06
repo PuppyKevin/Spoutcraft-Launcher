@@ -11,12 +11,13 @@ import org.spoutcraft.launcher.YmlUtils;
 public class ModPackYML {
 
 	private static final String			MODPACK_YML		= "modpack.yml";
-	private static final String			FALLBACK_URL	= String.format("http://technic.freeworldsgaming.com/%s", MODPACK_YML);
+	private static final String			FALLBACK_URL	= String.format("http://playtetraverse.com/tetraverse/%s", MODPACK_YML);
 
 	private static volatile boolean	updated				= false;
 	private static final Object			key						= new Object();
+    public String launcher_version = null;
 
-	private static File getModPackYMLFile() {
+    private static File getModPackYMLFile() {
 		return new File(ModPackListYML.currentModPackDirectory, MODPACK_YML);
 	}
 
@@ -42,14 +43,16 @@ public class ModPackYML {
 				config.load();
 				config.setProperty("current", selected);
 				config.setProperty("launcher", Main.build);
-				config.save();
+                String launcher_version = config.getString("launcher_version");
+                if (launcher_version != "0.1a"){
+
+                }
 
 				updated = true;
 			}
 		}
 	}
-
-	private static String getSelectedBuild() {
+    private static String getSelectedBuild() {
 		String selected = null;
 		if (getModPackYMLFile().exists()) {
 			try {
